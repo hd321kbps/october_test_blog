@@ -9,6 +9,7 @@ class CreatePostsTable extends Migration
     public function up()
     {
         Schema::create('hd321kbps_blog_posts', function(Blueprint $table) {
+            Schema::dropIfExists('hd321kbps_blog_posts');
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->timestamps();
