@@ -17,7 +17,7 @@ class Plugin extends PluginBase
     {
         return [
             'name'        => 'blog',
-            'description' => 'No description provided yet...',
+            'description' => 'Тестовый блог на October CMS',
             'author'      => 'hd321kbps',
             'icon'        => 'icon-leaf'
         ];
@@ -86,11 +86,23 @@ class Plugin extends PluginBase
         return [
             'blog' => [
                 'label'       => 'blog',
-                'url'         => Backend::url('hd321kbps/blog/mycontroller'),
+                'url'         => Backend::url('hd321kbps/blog/posts'),
                 'icon'        => 'icon-leaf',
                 'permissions' => ['hd321kbps.blog.*'],
                 'order'       => 500,
             ],
+            'sideMenu' => [
+                'posts' => [
+                    'label'       => 'Статьи',
+                    'icon'        => 'icon-list-alt',
+                    'url'         => \Backend::url('hd321kbps/blog/posts'),
+                ],
+                'categories' => [
+                    'label'       => 'Категории',
+                    'icon'        => 'icon-list-alt',
+                    'url'         => \Backend::url('hd321kbps/blog/categories'),
+                ],           
+            ]
         ];
     }
 }
