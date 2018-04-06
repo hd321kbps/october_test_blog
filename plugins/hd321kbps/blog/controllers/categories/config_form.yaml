@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Category
+
+# Model Form Field configuration
+form: $/hd321kbps/blog/models/category/fields.yaml
+
+# Model Class name
+modelClass: Hd321kbps\Blog\Models\Category
+
+# Default redirect location
+defaultRedirect: hd321kbps/blog/categories
+
+# Create page
+create:
+    title: Create Category
+    redirect: hd321kbps/blog/categories/update/:id
+    redirectClose: hd321kbps/blog/categories
+
+# Update page
+update:
+    title: Edit Category
+    redirect: hd321kbps/blog/categories
+    redirectClose: hd321kbps/blog/categories
+
+# Preview page
+preview:
+    title: Preview Category
