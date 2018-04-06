@@ -50,10 +50,8 @@ class Plugin extends PluginBase
      */
     public function registerComponents()
     {
-        return []; // Remove this line to activate
-
         return [
-            'Hd321kbps\Blog\Components\MyComponent' => 'myComponent',
+            'Hd321kbps\Blog\Components\Posts' => 'posts'
         ];
     }
 
@@ -79,29 +77,28 @@ class Plugin extends PluginBase
      *
      * @return array
      */
-    public function registerNavigation()
-    {
-        return []; // Remove this line to activate
-
+    public function registerNavigation() {
         return [
             'blog' => [
-                'label'       => 'blog',
-                'url'         => Backend::url('hd321kbps/blog/posts'),
+                'label'       => 'Blog',
+                'url'         => Backend::url('hd321kbps/blog/post'),
                 'icon'        => 'icon-leaf',
                 'permissions' => ['hd321kbps.blog.*'],
                 'order'       => 500,
             ],
             'sideMenu' => [
-                'posts' => [
-                    'label'       => 'Статьи',
-                    'icon'        => 'icon-list-alt',
-                    'url'         => \Backend::url('hd321kbps/blog/posts'),
+                'post' => [
+                    'label'       => 'Post',
+                    'icon'        => 'icon-copy',
+                    'url'         => Backend::url('hd321kbps/blog/post'),
+                    'permissions' => ['hd321kbps.blog.access_category']
                 ],
-                'categories' => [
-                    'label'       => 'Категории',
-                    'icon'        => 'icon-list-alt',
-                    'url'         => \Backend::url('hd321kbps/blog/categories'),
-                ],           
+                'category' => [
+                    'label'       => 'Category',
+                    'icon'        => 'icon-copy',
+                    'url'         => Backend::url('hd321kbps/blog/category'),
+                    'permissions' => ['hd321kbps.blog.access_category']
+                ]
             ]
         ];
     }

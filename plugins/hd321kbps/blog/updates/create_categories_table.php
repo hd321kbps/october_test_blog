@@ -11,6 +11,7 @@ class CreateCategoriesTable extends Migration
         Schema::create('hd321kbps_blog_categories', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->string('title');           
             $table->timestamps();
         });
     }

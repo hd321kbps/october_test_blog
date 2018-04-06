@@ -1,0 +1,11 @@
+title = "test"
+url = "/test"
+layout = "default"
+is_hidden = 0
+
+[posts]
+==
+{% for post in posts.getPosts %} <!--Вызывем метод getPosts в нашем компоненте и проходимся циклом по полученынм запиям!-->
+    <h4>{{ post.title }}</h4> <!--Выводим заголовок!-->
+    <p>{{ post.description|raw }}</p> <!--Выводим описание!-->
+{% endfor %}

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Post
+
+# Model Form Field configuration
+form: $/hd321kbps/blog/models/post/fields.yaml
+
+# Model Class name
+modelClass: Hd321kbps\Blog\Models\Post
+
+# Default redirect location
+defaultRedirect: hd321kbps/blog/post
+
+# Create page
+create:
+    title: Create Post
+    redirect: hd321kbps/blog/post/update/:id
+    redirectClose: hd321kbps/blog/post
+
+# Update page
+update:
+    title: Edit Post
+    redirect: hd321kbps/blog/post
+    redirectClose: hd321kbps/blog/post
+
+# Preview page
+preview:
+    title: Preview Post

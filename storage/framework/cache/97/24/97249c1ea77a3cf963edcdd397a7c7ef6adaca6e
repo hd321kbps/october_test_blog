@@ -1,0 +1,14 @@
+1523048251a:1:{s:8:"test.htm";a:10:{s:8:"fileName";s:8:"test.htm";s:7:"content";s:433:"title = "test"
+url = "/test"
+layout = "default"
+is_hidden = 0
+
+[posts]
+==
+{% for post in posts.getPosts %} <!--Вызывем метод getPosts в нашем компоненте и проходимся циклом по полученынм запиям!-->
+    <h4>{{ post.title }}</h4> <!--Выводим заголовок!-->
+    <p>{{ post.description|raw }}</p> <!--Выводим описание!-->
+{% endfor %}";s:5:"mtime";i:1523047640;s:6:"markup";s:352:"{% for post in posts.getPosts %} <!--Вызывем метод getPosts в нашем компоненте и проходимся циклом по полученынм запиям!-->
+    <h4>{{ post.title }}</h4> <!--Выводим заголовок!-->
+    <p>{{ post.description|raw }}</p> <!--Выводим описание!-->
+{% endfor %}";s:4:"code";N;s:5:"title";s:4:"test";s:3:"url";s:5:"/test";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:5:"posts";a:0:{}}}
